@@ -37,6 +37,20 @@
 ![Security+](https://img.shields.io/badge/CompTIA-Security%2B-red?style=for-the-badge)
 ![Splunk](https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white)
 
+### 🧰 Additional Technologies
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Scala](https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
+![Apache](https://img.shields.io/badge/Apache-D42029?style=for-the-badge&logo=apache&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2671E5?style=for-the-badge&logo=github-actions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-0DB7ED?style=for-the-badge&logo=docker&logoColor=white)
+
 ---
 
 ## 💼 Experience Highlights
@@ -53,7 +67,13 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=riyazrob&show_icons=true&theme=tokyonight"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=riyazrob&theme=tokyonight"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=riyazrob&theme=tokyonight&layout=compact"/>
 </p>
+
+![Top Contributed Repo](https://github-contributor-stats.vercel.app/api?username=riyazrob&limit=5&theme=tokyonight&combine_all_yearly_contributions=true)
+
+### ✍️ Random Dev Quote
+![Random developer quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 ---
 
@@ -64,6 +84,8 @@
 
 ## 📫 Connect With Me
 - 💼 [LinkedIn](https://www.linkedin.com/in/riyaz-mohammad-202b33269)
+- 💬 [Discord](https://discord.gg/riyazrob)
+- 📸 [Instagram](https://instagram.com/riyazrob)
 - 📧 riyazrob3@gmail.com
 
 ---
@@ -79,3 +101,5 @@
 <p align="center">
   ⚡ Building secure, scalable systems in the cloud ⚡
 </p>
+
+![Profile views](https://komarev.com/ghpvc/?username=riyazrob&color=0f2027)
