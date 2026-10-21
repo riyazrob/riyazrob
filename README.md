@@ -107,5 +107,3 @@
 <p align="center">
   ⚡ Building secure, scalable systems in the cloud ⚡
 </p>
-
-![Profile views](https://komarev.com/ghpvc/?username=riyazrob&color=0f2027)
