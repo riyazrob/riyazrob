@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Illustrative GitHub statistics dashboard mockup. All displayed metrics are fictional.">
+  <title>Illustrative GitHub Stats Preview</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0d1117; color: #e6edf3; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 18px 48px; }
+    main { width: min(100%, 980px); margin: 0 auto; }
+    .notice { border: 1px solid #d29922; background: #2b210b; color: #f0d88a; padding: 14px 18px; border-radius: 12px; font-weight: 750; letter-spacing: .02em; text-align: center; margin-bottom: 22px; }
+    h1 { margin: 0 0 8px; font-size: clamp(26px, 5vw, 38px); letter-spacing: -.04em; }
+    .sub { color: #9da7b3; margin: 0 0 26px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
+    .card, .panel { border: 1px solid #30363d; background: linear-gradient(145deg, #161b22, #10151c); border-radius: 16px; box-shadow: 0 12px 35px #0004; }
+    .card { padding: 22px; }
+    .label { color: #9da7b3; font-size: 13px; font-weight: 650; }
+    .value { font-size: clamp(31px, 6vw, 46px); line-height: 1.1; font-weight: 800; letter-spacing: -.045em; margin: 11px 0 7px; }
+    .delta { color: #3fb950; font-size: 13px; }
+    .panel { padding: 22px; overflow: hidden; }
+    .panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+    h2 { font-size: 18px; margin: 0; }
+    .legend { font-size: 12px; color: #9da7b3; }
+    .heatmap { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 12px); grid-auto-columns: minmax(6px, 1fr); gap: 5px; overflow: hidden; }
+    .day { background: #161b22; border-radius: 3px; aspect-ratio: 1; }
+    .l1 { background: #0e4429; } .l2 { background: #006d32; } .l3 { background: #26a641; } .l4 { background: #39d353; }
+    .months { display: flex; justify-content: space-between; margin: 0 0 8px; color: #8b949e; font-size: 11px; }
+    .foot { margin-top: 16px; color: #8b949e; font-size: 12px; line-height: 1.6; }
+    @media (max-width: 620px) { body { padding: 20px 12px 32px; } .stats { grid-template-columns: 1fr; gap: 10px; } .card { padding: 17px; } .value { font-size: 36px; } .heatmap { grid-template-rows: repeat(7, 9px); gap: 3px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="notice">ILLUSTRATIVE MOCKUP — ALL NUMBERS AND ACTIVITY BELOW ARE FICTIONAL</div>
+    <h1>GitHub activity</h1>
+    <p class="sub">A design preview showing how full-width profile stats could look. Not connected to GitHub.</p>
+
+    <section class="stats" aria-label="Fictional sample statistics">
+      <article class="card"><div class="label">Contributions in the last year</div><div class="value">1,284</div><div class="delta">Illustrative sample only</div></article>
+      <article class="card"><div class="label">Commits this year</div><div class="value">936</div><div class="delta">Illustrative sample only</div></article>
+      <article class="card"><div class="label">Repositories contributed to</div><div class="value">42</div><div class="delta">Illustrative sample only</div></article>
+    </section>
+
+    <section class="panel" aria-label="Fictional contribution heatmap">
+      <div class="panel-head"><h2>Contribution activity</h2><span class="legend">Sample heatmap · fictional</span></div>
+      <div class="months"><span>Nov</span><span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Oct</span></div>
+      <div class="heatmap" id="heatmap" aria-hidden="true"></div>
+      <p class="foot">This is a static visual mockup for layout review. It does not represent Riyaz’s actual GitHub contributions or statistics.</p>
+    </section>
+  </main>
+  <script>
+    const map = document.querySelector('#heatmap');
+    let seed = 20261021;
+    const random = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+    for (let i = 0; i < 371; i++) {
+      const cell = document.createElement('span');
+      const n = random();
+      cell.className = `day${n > .93 ? ' l4' : n > .78 ? ' l3' : n > .56 ? ' l2' : n > .34 ? ' l1' : ''}`;
+      map.appendChild(cell);
+    }
+  </script>
+</body>
+</html>
