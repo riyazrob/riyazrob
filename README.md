@@ -64,8 +64,6 @@
 
 ## 📈 GitHub Stats
 
-> Want to preview the layout with sample values? Open the [illustrative stats mockup](demo/stats-preview.html). Its numbers and heatmap are fictional and are not actual GitHub activity.
-
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=riyazrob&show_icons=true&include_all_commits=true&theme=github_dark&hide_border=true&custom_title=GitHub%20Stats" alt="Riyaz's GitHub statistics" width="100%" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=riyazrob&theme=github-dark-blue&hide_border=true" alt="Riyaz's GitHub contribution streak" width="100%" />
