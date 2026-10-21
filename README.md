@@ -65,15 +65,15 @@
 ## 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=riyazrob&show_icons=true&theme=tokyonight"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=riyazrob&theme=tokyonight"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=riyazrob&theme=tokyonight&layout=compact"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=riyazrob&show_icons=true&include_all_commits=true&theme=github_dark&hide_border=true&custom_title=GitHub%20Stats" alt="Riyaz's GitHub statistics" width="100%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=riyazrob&theme=github-dark-blue&hide_border=true" alt="Riyaz's GitHub contribution streak" width="100%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=riyazrob&theme=github_dark&hide_border=true&layout=compact" alt="Riyaz's most used languages" width="100%" />
 </p>
 
 ## 📅 Contribution Activity
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=riyazrob&theme=tokyo-night&hide_border=true&area=true&custom_title=GitHub%20Contribution%20Activity" alt="Full-width GitHub contribution activity graph for Riyaz" width="100%" />
+  <img src="https://raw.githubusercontent.com/riyazrob/riyazrob/output/github-contribution-grid-snake-dark.svg" alt="Full-width GitHub contribution chart for Riyaz" width="100%" />
 </p>
 
 ![Top Contributed Repo](https://github-contributor-stats.vercel.app/api?username=riyazrob&limit=5&theme=tokyonight&combine_all_yearly_contributions=true)
