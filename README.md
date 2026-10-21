@@ -70,6 +70,12 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=riyazrob&theme=tokyonight&layout=compact"/>
 </p>
 
+## 📅 Contribution Activity
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=riyazrob&theme=tokyo-night&hide_border=true&area=true&custom_title=GitHub%20Contribution%20Activity" alt="Full-width GitHub contribution activity graph for Riyaz" width="100%" />
+</p>
+
 ![Top Contributed Repo](https://github-contributor-stats.vercel.app/api?username=riyazrob&limit=5&theme=tokyonight&combine_all_yearly_contributions=true)
 
 ### ✍️ Random Dev Quote
