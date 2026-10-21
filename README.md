@@ -76,7 +76,7 @@
   <img src="https://raw.githubusercontent.com/riyazrob/riyazrob/output/github-contribution-grid-snake-dark.svg" alt="Full-width GitHub contribution chart for Riyaz" width="100%" />
 </p>
 
-![Top Contributed Repo](https://github-contributor-stats.vercel.app/api?username=riyazrob&limit=5&theme=tokyonight&combine_all_yearly_contributions=true)
+[![Top Contributed Repo](https://camo.githubusercontent.com/5525f2a913271bf6ff517e661dc3f53a18006b5d4f273b9d4e2ed1e8220db9fc/68747470733a2f2f6769746875622d636f6e7472696275746f722d73746174732e76657263656c2e6170702f6170693f757365726e616d653d726979617a726f62266c696d69743d35267468656d653d746f6b796f6e6967687426636f6d62696e655f616c6c5f796561726c795f636f6e747269627574696f6e733d74727565)](https://camo.githubusercontent.com/5525f2a913271bf6ff517e661dc3f53a18006b5d4f273b9d4e2ed1e8220db9fc/68747470733a2f2f6769746875622d636f6e7472696275746f722d73746174732e76657263656c2e6170702f6170693f757365726e616d653d726979617a726f62266c696d69743d35267468656d653d746f6b796f6e6967687426636f6d62696e655f616c6c5f796561726c795f636f6e747269627574696f6e733d74727565)
 
 ### ✍️ Dev Quote
 ![Random developer quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
