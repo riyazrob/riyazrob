@@ -23,6 +23,9 @@ jobs:
             dist/github-contribution-grid-snake.svg?palette=github-dark
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
+      - name: Complete current-week grid with neutral cells
+        run: python .github/scripts/pad-contribution-grid.py dist/github-contribution-grid-snake.svg dist/github-contribution-grid-snake-dark.svg
+
       - name: Publish contribution chart
         uses: crazy-max/ghaction-github-pages@v4
         with:
