@@ -29,10 +29,35 @@ jobs:
       - name: Complete current-week grid with neutral cells
         working-directory: ${{ github.workspace }}/dist
         run: |
-          ls -lA "$GITHUB_WORKSPACE/.github/scripts"
-          ls -lA "$GITHUB_WORKSPACE/dist"
-          node --version
-          node "${{ github.workspace }}/.github/scripts/pad-contribution-grid.mjs" .
+          node --input-type=module <<'NODE'
+          import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+
+          const files = readdirSync('.').filter((name) => /^github-contribution-grid-snake.*\.svg$/.test(name));
+          if (files.length === 0) throw new Error(`No generated contribution SVGs in ${process.cwd()}`);
+
+          for (const file of files) {
+            let svg = readFileSync(file, 'utf8');
+            const cellPattern = /<rect class="c(?: c\d+)?" x="(-?\d+(?:\.\d+)?)" y="(-?\d+(?:\.\d+)?)"/g;
+            const cells = [...svg.matchAll(cellPattern)];
+            const positions = new Set(cells.map(([, x, y]) => `${x},${y}`));
+            const xs = [...new Set(cells.map(([, x]) => x))].sort((a, b) => Number(a) - Number(b));
+            const ys = [...new Set(cells.map(([, , y]) => y))].sort((a, b) => Number(a) - Number(b));
+            const lastX = xs.at(-1);
+            const missing = ys.filter((y) => !positions.has(`${lastX},${y}`));
+            const insertAt = svg.search(/<rect class="u(?:\s|")|<rect class="s(?:\s|")/);
+            if (missing.length && insertAt < 0) throw new Error(`Cannot locate insertion point in ${file}`);
+            if (missing.length) {
+              const padding = missing.map((y) => `<rect class="c" x="${lastX}" y="${y}" rx="2" ry="2"/>`).join('');
+              svg = `${svg.slice(0, insertAt)}${padding}${svg.slice(insertAt)}`;
+              writeFileSync(file, svg);
+            }
+            const finalCells = [...svg.matchAll(cellPattern)];
+            const finalPositions = new Set(finalCells.map(([, x, y]) => `${x},${y}`));
+            const expected = xs.length * ys.length;
+            if (finalPositions.size !== expected) throw new Error(`${file}: expected ${expected} cells, got ${finalPositions.size}`);
+            console.log(`${file}: complete ${xs.length}x${ys.length} grid (${finalPositions.size} cells); added ${missing.length} neutral future cells`);
+          }
+          NODE
 
       - name: Publish contribution chart
         uses: crazy-max/ghaction-github-pages@v4
