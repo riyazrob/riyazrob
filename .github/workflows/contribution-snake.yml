@@ -27,7 +27,7 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Complete current-week grid with neutral cells
-        run: node .github/scripts/pad-contribution-grid.mjs "$GITHUB_WORKSPACE"
+        run: node "$GITHUB_WORKSPACE/.github/scripts/pad-contribution-grid.mjs" "$GITHUB_WORKSPACE"
 
       - name: Publish contribution chart
         uses: crazy-max/ghaction-github-pages@v4
