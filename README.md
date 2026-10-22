@@ -73,7 +73,7 @@
 ## 📅 Contribution Activity
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/2f80ed/riyazrob" alt="GitHub contribution calendar for Riyaz" width="100%" />
+  <img src="https://raw.githubusercontent.com/riyazrob/riyazrob/output/github-contribution-grid-snake-dark.svg" alt="Full-width GitHub contribution chart for Riyaz" width="100%" />
 </p>
 
 [![Browse GitHub repositories](https://img.shields.io/badge/GitHub-Browse%20repositories-181717?logo=github&logoColor=white)](https://github.com/riyazrob?tab=repositories)
