@@ -27,16 +27,7 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Complete current-week grid with neutral cells
-        working-directory: ${{ github.workspace }}/dist
-        run: |
-          for file in github-contribution-grid-snake*.svg; do
-            for y in 2 18 34 50 66 82 98; do
-              if ! grep -q "x=\"834\" y=\"$y\"" "$file"; then
-                cell="<rect class=\"c\" x=\"834\" y=\"$y\" rx=\"2\" ry=\"2\"/>"
-                sed -i "s#</svg>#$cell</svg>#" "$file"
-              fi
-            done
-          done
+        run: node .github/scripts/pad-contribution-grid.mjs "$GITHUB_WORKSPACE/dist"
 
       - name: Publish contribution chart
         uses: crazy-max/ghaction-github-pages@v4
