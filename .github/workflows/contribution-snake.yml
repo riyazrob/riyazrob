@@ -29,8 +29,10 @@ jobs:
       - name: Complete current-week grid with neutral cells
         working-directory: ${{ github.workspace }}/dist
         run: |
-          set -o pipefail
-          node "${{ github.workspace }}/.github/scripts/pad-contribution-grid.mjs" . 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          ls -lA "$GITHUB_WORKSPACE/.github/scripts"
+          ls -lA "$GITHUB_WORKSPACE/dist"
+          node --version
+          node "${{ github.workspace }}/.github/scripts/pad-contribution-grid.mjs" .
 
       - name: Publish contribution chart
         uses: crazy-max/ghaction-github-pages@v4
