@@ -48,7 +48,12 @@ def pad_current_week(svg_path: Path) -> None:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        raise SystemExit("Usage: pad-contribution-grid.py SVG [SVG ...]")
-    for argument in sys.argv[1:]:
-        pad_current_week(Path(argument))
+    if len(sys.argv) > 1:
+        svg_paths = [Path(argument) for argument in sys.argv[1:]]
+    else:
+        svg_paths = sorted(Path.cwd().rglob("github-contribution-grid-snake*.svg"))
+    svg_paths = [path for path in svg_paths if path.is_file()]
+    if not svg_paths:
+        raise SystemExit("No generated contribution SVGs found in the workspace")
+    for svg_path in svg_paths:
+        pad_current_week(svg_path)
