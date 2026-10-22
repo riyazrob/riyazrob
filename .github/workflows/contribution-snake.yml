@@ -28,14 +28,7 @@ jobs:
 
       - name: Complete current-week grid with neutral cells
         working-directory: ${{ github.workspace }}/dist
-        run: |
-          {
-            echo "Working directory: $PWD"
-            echo "Workspace: $GITHUB_WORKSPACE"
-            echo "Generated SVG files:"
-            find . -maxdepth 3 -type f -name 'github-contribution-grid-snake*.svg' -print
-            node "${{ github.workspace }}/.github/scripts/pad-contribution-grid.mjs" .
-          } 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+        run: node "${{ github.workspace }}/.github/scripts/pad-contribution-grid.mjs" . | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Publish contribution chart
         uses: crazy-max/ghaction-github-pages@v4
