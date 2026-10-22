@@ -36,9 +36,9 @@ def pad_current_week(svg_path: Path) -> None:
         f'<rect class="c" x="{last_column_x}" y="{y}" rx="2" ry="2"/>'
         for y in missing
     )
-    insert_before = re.search(r'<rect class="u(?:\s|\")', svg)
+    insert_before = re.search(r'<rect class="u(?:\s|")', svg)
     if not insert_before:
-        insert_before = re.search(r'<rect class="s(?:\s|\")', svg)
+        insert_before = re.search(r'<rect class="s(?:\s|")', svg)
     if not insert_before:
         raise SystemExit(f"Could not find insertion point in {svg_path}")
 
